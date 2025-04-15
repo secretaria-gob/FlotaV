@@ -1,0 +1,3 @@
+@echo off
+echo Iniciando Gestión de Flota Vehicular...
+start "" "Gestion_Flota_Vehicular\Gestion_Flota_Vehicular.exe"
