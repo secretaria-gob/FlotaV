@@ -5,15 +5,15 @@ channel = "stable-24_05"
 
 [deployment]
 deploymentTarget = "autoscale"
-run = ["streamlit", "run", "app.py", "--server.port", "5000"]
+run = ["streamlit", "run", "main.py", "--server.port", "5000"]
 
 [workflows]
-runButton = "Project"
+runButton = "Launch App"
 
 [[workflows.workflow]]
-name = "Project"
+name = "Launch App"
 mode = "parallel"
-author = "agent"
+author = "secretaria-gob"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
@@ -21,7 +21,7 @@ args = "Streamlit Server"
 
 [[workflows.workflow]]
 name = "Streamlit Server"
-author = "agent"
+author = "secretaria-gob"
 
 [workflows.workflow.metadata]
 agentRequireRestartOnSave = false
@@ -31,7 +31,7 @@ task = "packager.installForAll"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "streamlit run enhanced_app.py --server.port 5000"
+args = "streamlit run main.py --server.port 5000"
 waitForPort = 5000
 
 [[ports]]
