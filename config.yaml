@@ -1,19 +1,14 @@
 credentials:
   usernames:
     admin:
-      email: admin@example.com
-      name: Administrator
-      password: $2b$12$Y73Y.gVlnYs21yVEEBo/ae96.nHH9J5qWcI.9My.y3rIUXbxK4K26  # Password: admin123
-    manager:
-      email: manager@example.com
-      name: Fleet Manager
-      password: $2b$12$VWmvMGGI5XhGVRiT2DfV2.r7bWIun3k/Kh7XGapYi5s/7cRSPWqWe  # Password: manager123
-    operator:
-      email: operator@example.com
-      name: Fleet Operator
-      password: $2b$12$s9.cOzuW7fRk3V68Ei4SsuZMMeOlZh2FZ9vG95i0q8lxRo7j/b5r6  # Password: operator123
-
+      name: Administrador
+      password: $2b$12$Pb0ZxrCHNTPQoLsdBR1UGe6O.3n7ECVIcqiPXHH7qn.zpb2NnLoGK  # admin123
+      role: admin
+    user:
+      name: Usuario Regular
+      password: $2b$12$lQOXx1.mfQz5GD9DJM.8SeWP1tCJ.2F/hPrtrrm85w7e6ATUlwglu  # user123
+      role: user
 cookie:
   expiry_days: 30
-  key: random_signature_key
-  name: fleet_management_cookie
+  key: flota_vehicular_app
+  name: flota_cookie
