@@ -146,6 +146,8 @@ def update_vehicle(patente, **kwargs):
     values = []
     
     for key, value in kwargs.items():
+        if key not in ["area", "tipo", "marca", "modelo", "año", "estado", "km", "fecha_service", "taller", "observaciones", "pdf_files", "rori", "id_vehiculo", "vtv_vencimiento"]:
+            continue
         fields.append(f"{key} = ?")
         values.append(value)
     
